@@ -11,5 +11,5 @@ from .roles import Roles
 def crear_userprofile(sender, instance, created, **kwargs):
     if created:
         #El role del perfil creado es 'user' por defecto.-
-        UserProfile.objects.create(user=instance,role=Roles.SUSCRIPTOR.value)
+        UserProfile.objects.create(user=instance,role=Roles.ADMIN.value)
 
